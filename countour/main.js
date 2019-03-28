@@ -41,7 +41,7 @@ svg.call(d3.zoom().on('zoom', () => {
 }))
 
 
-d3.json(jsonUrl).then(data => {
+d3.json(geoJsonUrl).then(data => {
   // const countries = topojson.feature(data, data.objects.countries);
   const paths = gg.selectAll("path").data(countries.features);
   paths
