@@ -1,1 +1,34 @@
-!html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/d3@^5"></script>
+  <script src="https://unpkg.com/topojson@^3"></script>
+  <style>
+  /* * {outline:1px dotted blue;} */
+body {
+  margin: 0 auto;
+  overflow:hidden;
+}
+svg {
+  background-color: darkgray;
+/*  padding-top:50px; */
+}
+  
+path {
+  fill: white;
+  stroke:gray;
+  stroke-width: 0.05;
+/*   stroke-opacity: .4; */
+}
+.country:hover {
+  fill:blue;
+}  
+  </style>
+  <title>DRC Contour 10%</title>
+</head>
+<body>
+  <script src="main.js"></script>
+</body>
+</html>
