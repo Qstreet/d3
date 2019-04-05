@@ -412,6 +412,9 @@ d3.max(dataset, function(d) {
 [JSON Linter](https://jsonlint.com/)
 
 ### d3
+
+[D# Tips and Tricks Leanpub](https://leanpub.com/D3-Tips-and-Tricks/read)
+
 [Understanding the SVG Coord System](https://www.sarasoueidan.com/blog/svg-coordinate-systems/)
 
 [CSS Trick SVG Monster Guide](https://css-tricks.com/mega-list-svg-information/)
