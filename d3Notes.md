@@ -574,6 +574,8 @@ d3.max(dataset, function(d) {
 
 [Contour Maker](https://contours.axismaps.com/#6/-3.075/21.511)
 
+[HillShade Tutorial](https://observablehq.com/@awoodruff/diy-hillshade)
+
 * GeoJSON (a JSON-based format for specifying geographic data)
 * projections (functions that convert from lat/long co-ordinates to x & y co-ordinates)
 * geographic path generators (functions that convert GeoJSON shapes into SVG)
