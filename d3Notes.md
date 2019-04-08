@@ -915,9 +915,12 @@ d3.select("p")
 
 This binds an event listener to the p paragraph element. on() takes two arguments: the event name, and the function to be executed when the event is triggered on the selected element.
 
-Event compatibility tables
+Event compatibility tables: www.quirksmode.org
 
-www.quirksmode.org
+### Transitions
+any attr after d3.transition() is affected
+
+`var t = d3.transition().duration(750);`  // must be LOWER than interval loop
 
 ```
 rect {
