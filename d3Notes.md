@@ -8,6 +8,11 @@ II. circles should always be scaled by area, not by radius value
 
 III. select an element in the DOM, then append an svg to it
 
+### 3 types of data
+1. Quantitative 1,2,0.5,12% 3/4
+2. Categorical  male, female, African, Asian, S. American
+3. Ordinal (ranked)  s, m, l, xl, tall, med, short
+
 ### 3 forms of DataVis
 1. exploring data - discover something new
 2. analyzing data - testing a theory about the state of the world
