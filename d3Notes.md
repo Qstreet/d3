@@ -28,6 +28,9 @@ III. select an element in the DOM, then append an svg to it
   <div id="container">
 	<div id="svg-area"> </div>    
   </div>
+  <script>
+  	d3.json('file.json').then(function(data){ });
+  </script>
 </body>
 </html>
 ```
