@@ -320,6 +320,21 @@ d3.axisBottom(xScaleName)
   .tickValues([1,2,3,4,5,6]);
 ~~~
 
+### min, max, map
+
+var data = [
+  {grade: "A", value: 4},
+  {grade: "B", value: 3},
+  {grade: "C", value: 2},
+]
+
+// make min/max for domain  of scaleLinear()
+var min = d3.min(data, function(d){ return d.value; })
+
+// create domain of discrete elems for scaleBand() domain
+var grade_map = data.map(function(d){ return d.grade }) => ["A","B","C"]
+
+
 ### Chart Labels or Titles
 
 // X label
