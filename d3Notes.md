@@ -337,6 +337,9 @@ var min = d3.min(data, function(d){ return d.value; })
 // create domain of discrete elems for scaleBand() domain
 ```
 var grade_map = data.map(function(d){ return d.grade }) => ["A","B","C"]
+
+var x = d3.scaleBand().domain(data.map(function(d){ return d.grade; })
+	.range()
 ```
 
 ### Chart Labels or Titles
