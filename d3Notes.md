@@ -415,6 +415,77 @@ var grade_map = data.map(function(d){ return d.grade }) => ["A","B","C"]
 var x = d3.scaleBand().domain(data.map(function(d){ return d.grade; })
 	.range()
 ```
+### filter
+
+filter() method returns a new array created from all elements that pass a certain test preformed on an original array.
+
+    let newArr = oldArr.filter(callback);
+- newArr — the new array that is returned
+- oldArr — the array to run the filter function on
+- callback — the function used to test each element of the oldArr. Returning true keeps the element, returning false to not keep it.
+
+Our callback function can take three arguments:
+
+- element — the current element of the array
+- index — the current index of the value being processed
+- arr — the original array
+
+`let arr = [1,2,3,4,5,6];`
+
+To keep only the even numbers, we return true if even, and false if odd
+#### ex.1
+```
+let even = arr.filter(val => {
+  return val % 2 === 0;
+});
+// even = [2,4,6]
+```
+All you need do is define what you want to keep and then return true for those values.
+
+#### ex.2
+
+Lets consider a more complex example that utilizes an array of objects. Here’s the data we’ll work with:
+```
+let data = [
+  {
+    country: 'China',
+    population: 1409517397,
+  },
+  {
+    country: 'India',
+    population: 1339180127,
+  },
+  {
+    country: 'USA',
+    population: 324459463,
+  },
+  {
+    country: 'Indonesia',
+    population: 263991379,
+  }
+]
+```
+create a new array with only the countries that have a population > 500 million.
+
+return true if data.population is greater than 500,000,000.
+```
+let cities = data.filter(val => {
+  return val.population > 500000000;
+});
+// cities = [{country: "China", population: 1409517397},
+             {country: "India", population: 1339180127}]
+```
+
+#### Filter & ES6
+- ES6 arrow fn has simplified filter() even more
+```
+let cities = data.filter(val => {
+  return val.population > 500000000;
+});
+```
+`let cities = data.filter(val => val.population > 500000000);`
+
+
 
 ### Chart Labels or Titles
 
