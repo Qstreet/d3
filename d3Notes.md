@@ -485,7 +485,79 @@ let cities = data.filter(val => {
 ```
 `let cities = data.filter(val => val.population > 500000000);`
 
+### reduce
+reduce() method applies a function to each element in the array to reduce the array to a single value.
+```
+let result = arr.reduce(callback);
+// Optionally, you can specify an initial value
+```
+- let result = arr.reduce(callback, initValue);
+- result — the single value that is returned.
+- arr — the array to run the reduce function on.
+- callback — the function to execute on each element in the array.
+- initValue — an optionally supplied initial value. If this value is not supplied, the 0th element is used as the initial value.
 
+Our callback function can take four arguments. The new argument is the accumulator.
+
+- accumulator — the accumulator accumulates all of the callbacks returned values.
+- val — the current value being processed
+- index — the current index of the value being processed
+- arr — the original array
+
+`let arr = [1,2,3,4];`
+
+To find the sum of all the values in our array. 
+
+Each iteration will add the current value to our accumulator and return it. This returned value will then be our new accumulator.
+```
+let sum = arr.reduce((acc, val) => {
+  return acc + val;
+});
+```
+
+#### Specify an Initial Value of 100
+```
+let sum = arr.reduce((acc, val) => {
+  return acc + val;
+}, 100);
+```
+
+#### Reduce & ES6 arrow fn
+`let sum = arr.reduce((acc, val) => acc + val, 100);`
+
+```
+let data = [
+  {
+    country: 'China',
+    pop: 1409517397,
+  },
+  {
+    country: 'India',
+    pop: 1339180127,
+  },
+  {
+    country: 'USA',
+    pop: 324459463,
+  },
+  {
+    country: 'Indonesia',
+    pop: 263991379,
+  }
+]
+```
+Using the reduce() method, sum up the population of every country except China?
+
+```
+let sum = data.reduce((acc, val) => {
+  return val.country == 'China' ? acc : acc + val.pop;
+}, 0);
+```
+1. initial value of 0
+2. check if country name of the current element matches 'China'
+3. if so, return the accumulator unchanged (skip China)
+4. if other than China, return the accumulator plus the population of the current country.
+
+sum = 1927630969
 
 ### Chart Labels or Titles
 
