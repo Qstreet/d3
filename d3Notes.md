@@ -335,7 +335,7 @@ d3.axisBottom(xScaleName)
   .tickValues([1,2,3,4,5,6]);
 ~~~
 
-### min, max, map
+### min, max
 ```
 var data = [
   {grade: "A", value: 4},
@@ -348,6 +348,76 @@ var data = [
 ```
 var min = d3.min(data, function(d){ return d.value; })
 ```
+
+### map
+- The map() method is used to apply a function on every element in an array. A new array is returned.
+- depending on structure, the original array can be changed (ex.3)
+
+```
+let newArr = oldArr.map((val, index, arr) => {
+  // return element to new Array
+});
+```
+- newArr — the new array that is returned
+- oldArr — the array to run the map function on
+- val — the current value being processed
+- index — the current index of the value being processed
+- arr — the original array
+
+#### ex.1
+```
+let arr = [1,2,3,4];
+let plus5 = arr.map((val, i, arr) => {
+  return val + 5;
+});
+```
+#### ex.2
+
+Use both the value and index arguments to return an object with index/value at that index i.
+```
+let arr = [1,2,3,4];
+
+let newArr = arr.map((val, i, arr) => {
+  return {
+    value: val,
+    index: i
+  };
+});
+
+newArr = [
+  {value: 1, index: 0},
+  {value: 2, index: 1},
+  {value: 3, index: 2},
+  {value: 4, index: 3}
+]
+```
+
+#### ex.3
+to transform some of the values in original array
+
+let arr = [1,2,3,4];
+We want to double the even numbers and leave the odd numbers the same.
+```
+let newArr = arr.map((v,i,a) => {
+  return v % 2 === 0 ? v * 2 : v;
+});
+// newArr = [1,4,3,8];
+```
+alternate:
+```
+let newArr = arr.map((v,i,a) => {
+  if (v % 2 === 0){
+    return v * 2;
+  } else {
+    return v;
+  }
+});
+// newArr = [1,4,3,8];
+```
+
+1. check if the value divided by two has a remainder of zero (odd v even)
+2. If remainder is zero (even) return v * 2 or double the current value
+3. If odd return v or the current value unchanged
 
 // create domain of discrete elems for scaleBand() domain
 ```
