@@ -11,8 +11,10 @@ var margin = {
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    const urlJson = "gapMinderData.json";
-    let promises = [d3.json(urlJson)
+    
+const urlJson = "mindTheGap.json";
+
+let promises = [d3.json(urlJson)
       // , d3.csv('path/csvDat.csv')
     ]
     Promise.all(promises).then(function(allData) {
