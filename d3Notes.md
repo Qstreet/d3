@@ -353,6 +353,22 @@ var min = d3.min(data, function(d){ return d.value; })
 - The map() method is used to apply a function on every element in an array. A new array is returned.
 - depending on structure, the original array can be changed (ex.3)
 
+#### equivilent for loop
+```
+let startHike= [96, 84, 92, 98, 94];
+let summit = [];
+ 
+for(let i=0;  i&lt;startHike.length; i++){
+  let hikerEenrgy=starthike[i];
+ 
+  let halfEnergy= hikerEnergy/2
+ 
+  summit.push(halfEnergy);
+}
+ 
+// sumit => [48,42,46,49,47]
+```
+
 ```
 let newArr = oldArr.map((val, index, arr) => {
   // return element to new Array
@@ -804,6 +820,9 @@ d3.max(dataset, function(d) {
 [Javascript Linter](https://validatejavascript.com/)
 
 [JSON Linter](https://jsonlint.com/)
+
+### Social Media
+[Twitter API](https://developer.twitter.com/en/docs)
 
 ### d3
 
