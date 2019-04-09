@@ -12,7 +12,7 @@ var margin = {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
-const urlJson = "mindTheGap.json";
+const urlJson = "mindGap.json";
 
 let promises = [d3.json(urlJson)
       // , d3.csv('path/csvDat.csv')
