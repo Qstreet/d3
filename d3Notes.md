@@ -55,6 +55,10 @@ var svg = d3
 const urlJson =
   "file-topo.json";
 
+// scales
+// lables
+// axes
+
 d3
   .json(urlJson).then(function(data) {
     data.forEach(function(d) {
