@@ -559,6 +559,114 @@ let sum = data.reduce((acc, val) => {
 
 sum = 1927630969
 
+### chain map, filter, reduce
+array of objects w name, age, type
+```
+data = [
+  {
+    name: 'Butters',
+    age: 3,
+    type: 'dog'
+  },
+  {
+    name: 'Lizzy',
+    age: 6,
+    type: 'dog'
+  },
+  {
+    name: 'Red',
+    age: 1,
+    type: 'cat'
+  },
+  {
+    name: 'Joey',
+    age: 3,
+    type: 'dog'
+  },
+];
+```
+
+1. Select only the dogs
+2. Translate their ages into dog years (multiply them by seven)
+3. Sum the results
+
+### Loop method BOOOOO!
+```
+function getAges(data) {
+  let sum = 0;
+  for (var i = 0; i < data.length; i++){
+    if (data[i].type === 'dog'){
+      let tempAge = data[i].age;
+      sum += (tempAge * 7);
+    }
+  }
+  return sum;
+}
+// getAges(data) = 84
+```
+
+1. filter out the cats with filter(pet).  Returns true if type === dog
+```
+let ages = data.filter((animal) => {
+  return animal.type === 'dog';
+})
+```
+2. Now that we only have dogs, find the ages of the dogs and multiply 7 with the map()
+```
+.map((animal) => {
+  return animal.age *= 7
+})
+```
+3. Sum the ages of all of our dogs with reduce()
+```
+.reduce((sum, animal) => {
+  return sum + animal.age;
+});
+```
+4. Chain them
+```
+let ages = data
+  .filter((animal) => {
+    return animal.type === 'dog';
+}).map((animal) => {
+    return animal.age * 7
+}).reduce((sum, animal) => {
+    return sum + animal.age;
+});
+// ages = 84
+```
+Refactor w 3 functions
+
+> "pure function" a fn that given the same input, always returns same output without side effects. Pure functions only depend on their input arguments.
+
+function that checks if an element is a dog. It takes our element as input and returns either true or false.
+```
+let isDog = (animal) => {
+  return animal.type === 'dog';
+}
+```
+
+function that multiplies the age of an element by seven and returns only the age in dog years:
+```
+let dogYears = (animal) => {
+  return animal.age * 7;
+}
+```
+
+function that sums two numbers and returns the result:
+```
+let sum = (sum, animal) => {
+  return sum + animal;
+}
+```
+```
+let ages = data
+  .filter(isDog)
+  .map(dogYears)
+  .reduce(sum);
+// ages = 84
+```
+
 ### Chart Labels or Titles
 
 // X label
