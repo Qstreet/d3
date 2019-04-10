@@ -15,7 +15,7 @@ let promises = [d3.json(urlJson)
     Promise.all(promises).then(function(allData) {
         let data = allData[0];
         // let otherData = allData[1];
-        console.log(d3.min(data, d => d3.min(d.countries.map(d => d.income))); // check data
+        console.log(d3.min(data, d => d3.min(d.countries.map(d => d.income)))); // check data
         // convert values to integers or date objs
         data.forEach(function(d) {
           d = d;
