@@ -432,7 +432,7 @@ var x = d3.scaleBand().domain(data.map(function(d){ return d.grade; })
 	.range()
 ```
 
-### ex.4 key-value pair
+#### ex.4 key-value pair
 ```
 let startHike= [
   {name:"dave", water: 86},
@@ -449,7 +449,8 @@ let summit = startHike.map(function(hikerEnergy){
  
 // summit => [86, 56, 42, 60, 36]
 ```
-
+#### map snippets
+`let minIncome = d3.min(data, d => d3.min(d.countries.map(d => d.income))`
 
 ### filter
 
