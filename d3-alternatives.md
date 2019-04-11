@@ -15,5 +15,156 @@ Having evolved from Google’s earlier Image Charts API, Google’s Chart Tools 
 ## Highcharts
 A JavaScript-based charting library with several predesigned themes and chart types. The tool is free only for noncommercial use.
 
-## Peity
-A jQuery plug-in for very simple and very tiny bar, line, and pie charts that supports only recent browsers.  Did I mention that this makes only very tiny visualizations? +10 cuteness points.Timeline.jsA library specifically forgenerating interactive timelines.  No coding is required; just use the code generator.  There is not much room for customization, but hey, timelines are really hard to do well.Graph VisualizationsA “graph” is just data with a networked structure (for example, B is connectedto A, and A is connected to C).Arbor.jsA library for graph visualization usingjQuery.  Even if you never use this, you should check out how the documentation is presented as a graph, using the tool itself.  (It’s so meta.)  It uses the HTML canvas, so it won’t work in older browsers.Cytoscape.jsLibrary for graph theory analysis and visualization.Sigma.jsA very lightweight library for graphvisualization.  Sigma.js is beautiful and fast, and it also uses canvas.GeomappingIn this book, I distinguish between mapping (all visualizations are maps) andgeomapping (visualizations that include geographic data, or geodata,such as traditional maps). D3 has a lot of geomapping functionality, butyou should know about these other tools.KartographA JavaScript-and-Python combo forgorgeous, entirely vector-based mapping by Gregor Aisch with must-see demos.  Please go look at them now.  I promise you’ve never seen online maps this beautiful.LeafletA library for tiled maps,designed for smooth interaction on both desktop and mobile devices. It includes some support for displaying data layers of SVG on top of the map tiles. (See Mike’s demo “Using D3 with Leaflet”.)Modest MapsThe granddaddy of tiled map libraries, Modest Maps has been succeeded by Polymaps and D3, but lots of people still love it, as it is lightweight and works with old versions of IE and other browsers.  Modest Maps has been adapted for ActionScript, Processing, Python, PHP, Cinder, openFrameworks…yeah, basically everything.  File this under “oldie, but goodie.”PolymapsA predecssor of D3 by Mike Bostock, this library is for displaying tiled maps, with layers of data on top of the tiles.  Polymaps relies on SVG and thus works best with current browsers.  That said, you may be better off using D3 and the d3-tile plug-in.Almost from ScratchThese tools, like D3, provide methods of drawing visual forms, butwithout predesigned visual templates. If you enjoy the creative freedomof starting from scratch, you might enjoy these.p5.jsp5 takes Processing, the fantasticprogramming language for artists and designers, and reimagines it in JavaScript for the web. Imagine the friendly nomenclature of Processing, and the webby strength of JavaScript.  The p5 project is led by Lauren McCarthy, and it renders using canvas, so only modern browsers are supported.Paper.jsA framework for rendering vectorgraphics to canvas. Also, its website is one of the most beautiful onthe internet, and their demos are unbelievable. (Go play with them now.)RaphaëlA well-established library for drawing vector graphics by Dmitry Baranovskiy, popular due to its friendly syntax and support for older browsers.Snap.svgA pretty fantastic, modern library for SVG creating and animation, this is also primarily by Dmitry.  Consider it Raphaël’s successor.Two.jsJavaScript library for two-dimensional drawing in modern browsers, rendering to SVG, canvas, and WebGL, by Jono Brandel.Three-DimensionalD3 is not the best at 3D, simply because web browsers are historicallytwo-dimensional beasts. But with increased support for WebGL, there arenow more opportunities for 3D web experiences.PhiloGLA WebGL frameworkspecifically for 3D visualization (no longer under active development, unfortunately).Three.jsA library for generatingany sort of 3D scene you could imagine, produced by Google’s Data Artsteam. You could spend all day exploring the mind-blowing demos on theirsite.Tools Built with D3General-use charting librariesThere are many different charting libraries built on top of D3.  Theoretically, these make it easier to generate a visualization quickly, and often without having to write any D3 code yourself.  The trade-off is generally less customization; you have to be comfortable with the chart templates supported by each tool.  Also, each library has its own syntax and quirks.  I recommend taking a quick glance at each one to decide what works best for you.BritechartsA reusable charting library by for D3 4.x brought to you by Eventbrite’s engineering team. And, wow, those colors sure are “brite.”C3.jsReusable charting by Masayuki Tanaka.  Not yet updated to work with D3 4.x at the time of this writing. (But what a nice demo!)ContourBeautifully designed, simple chart types.D3plusCharting library that also includes some nice utilities for easy text wrapping, color legibility, and other things you’d probably want help with.D4Library with lots of supported chart types.dimpleLibrary intended for business analysts.NVD3NVD3 was one of the first D3-based charting libraries, and offers lots of beautiful examples, with room for customization.plotly.jsQuick and easy charting. Just drop in your data values, and you’re off!PlottablePromises “the power and flexibility of D3, but easier,” by providing predefined “components” that you can reuse.uvChartsAnother such library, with 12 supported chart types.VegaA “visualization grammar” with which you define chart types, visual properties, interaction rules, and data in a simple JSON object (more on JSON in Chapter 3, Technology Fundamentals).  Then Vega translates your specifications into a working, interactive chart, using D3 under the hood.  Version 2 of this amazing, powerful tool was primarily authored by Arvind Satyanarayan, and was produced in Jeff Heer’s new Interactive Data Lab at the University of Washington (Jeff’s next stop after Stanford).More specialized toolsThis section includes D3-based libraries with more specialized use cases (such as for time series data), as well as plug-ins for use with D3 and other related tools.CrossfilterA library for working with large, multivariate datasets, written primarily by Mike Bostock.  This is useful for trying to squeeze your “big data” into a relatively small web browser.  Not technically built with D3, but is commonly used with D3.CubismA D3 plug-in for visualizing time series data, also written by Mike Bostock. (One of my favorite demos.)d3-annotationA module for painlessly implementing visual annotations in D3 by Susie Lu.d3-context-menuA plug-in for adding contextual menus to your D3 projects, by Patrick Gillespie.d3.sketchyThis tool by Sebastian Meier takes your SVG shapes and makes them look hand-drawn.  Useful when you are working in code, but need to convey to others that the output is rough and your design is still in process (like a sketch). Be sure to play with the interactive customizer.D3 SVG LegendA reusable legend component for D3 by Susie Lu.D3-tipA tool for generating tooltips in D3 charts, in case you get tired of making your own, as described in Chapter 10.D6To be honest, I don’t understand this one, but I had to share it here because the name stands for “Dynamically Downloaded Data-Driven Documents, Dude.”dc.jsThe “dc” is short for dimensional charting, as this library is optimized for exploring large, multidimensional datasets.FirespraySuper-fast charting library for streaming data. (Think high-density real-time data dashboards.)Forest D3A time-series charting library built on D3, by Robin Hu.MetricsGraphics.jsA very nice library for working with time-series data, by Ali Almossawi and Hamilton Ulmer.Miso ProjectAn open source project that includes d3.chart, “a framework for building reusable charts with d3.js,” as well as other useful tools, from the brilliant people at Bocoup and The Guardian Interactive team.RAW GraphsPaste your spreadsheet into this amazing tool and generate an array of different chart types in seconds. A project initiated at the esteemed Density Design research lab in Milan.R2D3A unique blend of D3 and R that enables you to use R to create D3 visualizations.RickshawA toolkit for displaying time series data that is also very customizable.TechanJSA library specifically for financial data charting and analysis.TributaryA great tool for experimenting with live coding using D3, by Ian Johnson.
+Peity
+A jQuery plug-in for very simple and very tiny bar, line, and pie charts that supports only recent browsers. Did I mention that this makes only very tiny visualizations? +10 cuteness points.
+
+Timeline.js
+A library specifically for generating interactive timelines. No coding is required; just use the code generator. There is not much room for customization, but hey, timelines are really hard to do well.
+
+Graph Visualizations
+A “graph” is just data with a networked structure (for example, B is connected to A, and A is connected to C).
+
+Arbor.js
+A library for graph visualization using jQuery. Even if you never use this, you should check out how the documentation is presented as a graph, using the tool itself. (It’s so meta.) It uses the HTML canvas, so it won’t work in older browsers.
+
+Cytoscape.js
+Library for graph theory analysis and visualization.
+
+Sigma.js
+A very lightweight library for graph visualization. Sigma.js is beautiful and fast, and it also uses canvas.
+
+Geomapping
+In this book, I distinguish between mapping (all visualizations are maps) and geomapping (visualizations that include geographic data, or geodata, such as traditional maps). D3 has a lot of geomapping functionality, but you should know about these other tools.
+
+Kartograph
+A JavaScript-and-Python combo for gorgeous, entirely vector-based mapping by Gregor Aisch with must-see demos. Please go look at them now. I promise you’ve never seen online maps this beautiful.
+
+Leaflet
+A library for tiled maps, designed for smooth interaction on both desktop and mobile devices. It includes some support for displaying data layers of SVG on top of the map tiles. (See Mike’s demo “Using D3 with Leaflet”.)
+
+Modest Maps
+The granddaddy of tiled map libraries, Modest Maps has been succeeded by Polymaps and D3, but lots of people still love it, as it is lightweight and works with old versions of IE and other browsers. Modest Maps has been adapted for ActionScript, Processing, Python, PHP, Cinder, openFrameworks…yeah, basically everything. File this under “oldie, but goodie.”
+
+Polymaps
+A predecssor of D3 by Mike Bostock, this library is for displaying tiled maps, with layers of data on top of the tiles. Polymaps relies on SVG and thus works best with current browsers. That said, you may be better off using D3 and the d3-tile plug-in.
+
+Almost from Scratch
+These tools, like D3, provide methods of drawing visual forms, but without predesigned visual templates. If you enjoy the creative freedom of starting from scratch, you might enjoy these.
+
+p5.js
+p5 takes Processing, the fantastic programming language for artists and designers, and reimagines it in JavaScript for the web. Imagine the friendly nomenclature of Processing, and the webby strength of JavaScript. The p5 project is led by Lauren McCarthy, and it renders using canvas, so only modern browsers are supported.
+
+Paper.js
+A framework for rendering vector graphics to canvas. Also, its website is one of the most beautiful on the internet, and their demos are unbelievable. (Go play with them now.)
+
+Raphaël
+A well-established library for drawing vector graphics by Dmitry Baranovskiy, popular due to its friendly syntax and support for older browsers.
+
+Snap.svg
+A pretty fantastic, modern library for SVG creating and animation, this is also primarily by Dmitry. Consider it Raphaël’s successor.
+
+Two.js
+JavaScript library for two-dimensional drawing in modern browsers, rendering to SVG, canvas, and WebGL, by Jono Brandel.
+
+Three-Dimensional
+D3 is not the best at 3D, simply because web browsers are historically two-dimensional beasts. But with increased support for WebGL, there are now more opportunities for 3D web experiences.
+
+PhiloGL
+A WebGL framework specifically for 3D visualization (no longer under active development, unfortunately).
+
+Three.js
+A library for generating any sort of 3D scene you could imagine, produced by Google’s Data Arts team. You could spend all day exploring the mind-blowing demos on their site.
+
+Tools Built with D3
+GENERAL-USE CHARTING LIBRARIES
+There are many different charting libraries built on top of D3. Theoretically, these make it easier to generate a visualization quickly, and often without having to write any D3 code yourself. The trade-off is generally less customization; you have to be comfortable with the chart templates supported by each tool. Also, each library has its own syntax and quirks. I recommend taking a quick glance at each one to decide what works best for you.
+
+Britecharts
+A reusable charting library by for D3 4.x brought to you by Eventbrite’s engineering team. And, wow, those colors sure are “brite.”
+
+C3.js
+Reusable charting by Masayuki Tanaka. Not yet updated to work with D3 4.x at the time of this writing. (But what a nice demo!)
+
+Contour
+Beautifully designed, simple chart types.
+
+D3plus
+Charting library that also includes some nice utilities for easy text wrapping, color legibility, and other things you’d probably want help with.
+
+D4
+Library with lots of supported chart types.
+
+dimple
+Library intended for business analysts.
+
+NVD3
+NVD3 was one of the first D3-based charting libraries, and offers lots of beautiful examples, with room for customization.
+
+plotly.js
+Quick and easy charting. Just drop in your data values, and you’re off!
+
+Plottable
+Promises “the power and flexibility of D3, but easier,” by providing predefined “components” that you can reuse.
+
+uvCharts
+Another such library, with 12 supported chart types.
+
+Vega
+A “visualization grammar” with which you define chart types, visual properties, interaction rules, and data in a simple JSON object (more on JSON in Chapter 3, Technology Fundamentals). Then Vega translates your specifications into a working, interactive chart, using D3 under the hood. Version 2 of this amazing, powerful tool was primarily authored by Arvind Satyanarayan, and was produced in Jeff Heer’s new Interactive Data Lab at the University of Washington (Jeff’s next stop after Stanford).
+
+MORE SPECIALIZED TOOLS
+This section includes D3-based libraries with more specialized use cases (such as for time series data), as well as plug-ins for use with D3 and other related tools.
+
+Crossfilter
+A library for working with large, multivariate datasets, written primarily by Mike Bostock. This is useful for trying to squeeze your “big data” into a relatively small web browser. Not technically built with D3, but is commonly used with D3.
+
+Cubism
+A D3 plug-in for visualizing time series data, also written by Mike Bostock. (One of my favorite demos.)
+
+d3-annotation
+A module for painlessly implementing visual annotations in D3 by Susie Lu.
+
+d3-context-menu
+A plug-in for adding contextual menus to your D3 projects, by Patrick Gillespie.
+
+d3.sketchy
+This tool by Sebastian Meier takes your SVG shapes and makes them look hand-drawn. Useful when you are working in code, but need to convey to others that the output is rough and your design is still in process (like a sketch). Be sure to play with the interactive customizer.
+
+D3 SVG Legend
+A reusable legend component for D3 by Susie Lu.
+
+D3-tip
+A tool for generating tooltips in D3 charts, in case you get tired of making your own, as described in Chapter 10.
+
+D6
+To be honest, I don’t understand this one, but I had to share it here because the name stands for “Dynamically Downloaded Data-Driven Documents, Dude.”
+
+dc.js
+The “dc” is short for dimensional charting, as this library is optimized for exploring large, multidimensional datasets.
+
+Firespray
+Super-fast charting library for streaming data. (Think high-density real-time data dashboards.)
+
+Forest D3
+A time-series charting library built on D3, by Robin Hu.
+
+MetricsGraphics.js
+A very nice library for working with time-series data, by Ali Almossawi and Hamilton Ulmer.
+
+Miso Project
+An open source project that includes d3.chart, “a framework for building reusable charts with d3.js,” as well as other useful tools, from the brilliant people at Bocoup and The Guardian Interactive team.
+
+RAW Graphs
+Paste your spreadsheet into this amazing tool and generate an array of different chart types in seconds. A project initiated at the esteemed Density Design research lab in Milan.
+
+R2D3
+A unique blend of D3 and R that enables you to use R to create D3 visualizations.
+
+Rickshaw
+A toolkit for displaying time series data that is also very customizable.
+
+TechanJS
+A library specifically for financial data charting and analysis.
+
+Tributary
+A great tool for experimenting with live coding using D3, by Ian Johnson.
