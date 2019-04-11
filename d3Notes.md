@@ -59,28 +59,16 @@ const urlJson =
 // lables
 // axes
 
-d3
-  .json(urlJson).then(function(data) {
-    data.forEach(function(d) {
-      d.height = +d.height;
-    });
-
-    console.log(data);
-
-    svg
-      .selectAll("rect").data(data).enter().append("rect")
-      .attr("x", function(d, i) {
-        return i * 25;
-      })
-      .attr("y", function(d, i) {
-        return (height - d.height)
-      })
-      .attr("width", 15)
-      .attr("height", function(d,i){
-      return d.height
-    })
-      .attr("fill", "blue");
-  })
+d3.json(urlJson, function(d) {
+  return {
+    year: new Date(+d.Year, 0, 1), // convert "Year" column to Date
+    make: d.Make,
+    model: d.Model,
+    length: +d.Length // convert "Length" column to number
+  };
+}).then(function(data) {
+  console.log(data);
+});
   .catch(function(error) {
     console.log(error);
   });
