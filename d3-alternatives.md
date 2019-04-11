@@ -1,6 +1,6 @@
 
-## Easy Charts
-DataWrapper
+# Easy Charts
+## DataWrapper
 
 A beautiful web service that lets you upload your data and quickly generate a chart that you can republish elsewhere, embed on your site, or export to PDF. This service was originally intended for journalists, but it is helpful for everyone.  
 
