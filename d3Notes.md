@@ -869,6 +869,8 @@ bigG.append('text')
 
 ### Data
 
+[Correlates of War](http://correlatesofwar.org/)
+
 [Population Counter Age Stats](https://population.io/)
 
 [Relief Web Data](https://reliefweb.int/country/cod)
