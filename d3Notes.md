@@ -830,7 +830,7 @@ bigG.append('text')
 <script src="https://unpkg.com/d3-geo-scale-bar@0.2.0/build/d3-geo-scale-bar.js"></script>
 ```
 
-## Refs
+## REFS
 ### javascript
 [Eloquent Javascript](http://eloquentjavascript.net/)
 
@@ -977,6 +977,10 @@ bigG.append('text')
 [New Media @UCB](https://newmedia.report/classes/coding/2018/mapping-in-d3/)
 > nice list of refs
 
+### Good Old APIs
+[Open Weather Map](https://openweathermap.org/)
+
+[FIND A GOOD BASIC MARKETS API](#)
 
 ### Legends
 [Susie Lu Legends](https://d3-legend.susielu.com/)
