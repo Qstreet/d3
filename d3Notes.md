@@ -304,7 +304,6 @@ var rowConverter = function(d) {
 }
 
 ```
-
 ### d3.scaleTime()
 ```
 timeScale = d3.scaleTime()
@@ -333,9 +332,7 @@ Each axis must be told on what scale to operate. Here we pass in the xScale:
 ```
 xAxis.scale(xScale);
 ```
-
 or
-
 ```
 var xAxis = d3.axisBottom().scale(xScale);
 ```
@@ -848,6 +845,8 @@ bigG.append('text')
 [Javascript Linter](https://validatejavascript.com/)
 
 [JSON Linter](https://jsonlint.com/)
+
+[Lodash](https://unpkg.com/lodash@^4.17)
 
 ### Social Media
 [Twitter API](https://developer.twitter.com/en/docs)
