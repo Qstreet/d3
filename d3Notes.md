@@ -214,6 +214,12 @@ d3.csv('fruit.csv').then(function(data){
 ## Scales
 > translate numbers from dataSpace to pixelSpace
 
+1. Quantitative: Continuous domain like dates, times, real numbers etc.
+2. Ordinal: Separate domains like categories, colors, names,
+3. Linear: Converts one value in the domain interval into a value in the range interval
+4. Identity: Good for pixel values
+5. Power and Logarithmic Scales: It is used for exponentially increasing values like log,pow,sqrt
+
 ### d3.scaleLinear()
 #### colors for heat charts
 REMEMBER TO REVERSE OUTPUT (top,bottom) so the scale goes 0 at bottom and up the scale
