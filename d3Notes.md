@@ -892,6 +892,8 @@ bigG.append('text')
 
 ### Data
 
+[PRIO Data on Armed Conflict](https://www.prio.org/Data/Armed-Conflict/)
+
 [USAID Data](https://data.usaid.gov/)
 
 [Economist Data Unit](http://data.eiu.com)
