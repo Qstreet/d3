@@ -821,6 +821,13 @@ bigG.append('text')
 
 
 ## Javascript
+
+### ObservableHQ
+#### DOM.svg
+alias for `document.createElementNS;`
+
+it returns a new SVG node with the given width and height.
+
 ### Error Handling
 
 ```
