@@ -828,6 +828,17 @@ alias for `document.createElementNS;`
 
 it returns a new SVG node with the given width and height.
 
+```
+var svg = DOM.svg(w,h);
+return svg
+```
+```
+var svg = d3.select(DOM.svg(w,h));
+return svg.node();
+```
+
+
+
 ### Error Handling
 
 ```
