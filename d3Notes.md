@@ -892,6 +892,8 @@ bigG.append('text')
 
 ### Data
 
+[CIA Factbook Github](https://github.com/factbook)
+
 [PRIO Data on Armed Conflict](https://www.prio.org/Data/Armed-Conflict/)
 
 [USAID Data](https://data.usaid.gov/)
