@@ -890,6 +890,11 @@ return svg.node();
 ### Social Media
 [Twitter API](https://developer.twitter.com/en/docs)
 
+### Reads
+[Political Violence at a Glance](http://politicalviolenceataglance.org/)
+
+[River DataWrapper](https://river.datawrapper.de/)
+
 ### d3
 
 [D# Tips and Tricks Leanpub](https://leanpub.com/D3-Tips-and-Tricks/read)
@@ -910,7 +915,12 @@ return svg.node();
 [js Code Readability](https://www.codereadability.com/)
 
 ### d3 examples
+#### maps
 [d3 Examples](https://github.com/emeeks/d3-carto-map)
+
+#### Bubble Charts Force Layouts
+[Creating Bubble Charts w d3v4](https://vallandingham.me/bubble_charts_with_d3v4.html)
+
 
 ### Data
 
