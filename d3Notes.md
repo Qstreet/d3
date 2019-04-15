@@ -911,6 +911,8 @@ return svg.node();
 
 ### Data
 
+[Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+
 [NYTimes APIs](https://developer.nytimes.com/)
 
 [Google DataSet Search](https://toolbox.google.com/datasetsearch)
