@@ -1,7 +1,6 @@
 # REMEMBER: d3 is a DOM manipulation library!
 
 ## Commandments
-
 I. the outer `<svg>` must have a H x W defined somewhere
 
 II. circles should always be scaled by area, not by radius value
@@ -874,6 +873,8 @@ bigG.append('text')
 [d3 Examples](https://github.com/emeeks/d3-carto-map)
 
 ### Data
+
+[Economist Data Unit](http://data.eiu.com)
 
 [Correlates of War](http://correlatesofwar.org/)
 
