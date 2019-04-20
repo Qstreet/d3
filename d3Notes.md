@@ -7,6 +7,13 @@ II. circles should always be scaled by area, not by radius value
 
 III. select an element in the DOM, then append an svg to it
 
+## Conventions
+1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
+2. When most d3 functions are called with arguments these functions act as setters (setting the corresponding property to the supplied value)
+3. when called without arguments, getters (returning the current value of the property).
+4. To entirely remove a property, call the appropriate setter with `null` as argument.
+
+
 ### 3 types of data
 2. Categorical  male, female, African, Asian, S. American
 3. Ordinal (ranked)  s, m, l, xl, tall, med, short
@@ -838,8 +845,6 @@ var svg = d3.select(DOM.svg(w,h));
 return svg.node();
 ```
 
-
-
 ### Error Handling
 
 ```
@@ -889,6 +894,11 @@ return svg.node();
 
 ### Social Media
 [Twitter API](https://developer.twitter.com/en/docs)
+
+### Books on D3
+[D3 for the Impatient](https://learning.oreilly.com/library/view/d3-for-the/9781492046783/)
+
+
 
 ### Reads
 [Political Violence at a Glance](http://politicalviolenceataglance.org/)
@@ -1182,8 +1192,6 @@ returns getJson object from Topojson encoded file
 Returns the GeoJSON Feature or FeatureCollection for the specified object in the given topology. If the specified object is a GeometryCollection, a FeatureCollection is returned, and each geometry in the collection is mapped to a Feature. Otherwise, a Feature is returned. The returned feature is a shallow copy of the source object: they may share identifiers, bounding boxes, properties and coordinates.
 
 ## D3 Update Pattern
-
-
 
 ### Interval fn to loop code with flag
 #### flag variable
