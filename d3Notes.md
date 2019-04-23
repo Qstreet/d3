@@ -7,6 +7,8 @@ II. circles should always be scaled by area, not by radius value
 
 III. select an element in the DOM, then append an svg to it
 
+IV. SVG is not HTML. SVG has no concept of reflow (i.e. changes in the position of one element do not affect other elements apart from tspan and tref in text).
+
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
 2. When most d3 functions are called with arguments these functions act as setters (setting the corresponding property to the supplied value)
