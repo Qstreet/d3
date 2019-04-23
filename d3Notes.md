@@ -53,7 +53,7 @@ Data sets are called data or ds.
 ### Combining Data
 [Learn JS Data](https://observablehq.com/@dakoop/learn-js-data)
 
-## SNIPETS
+## SNIPPETS
 ### Node Server
 `http-server ~/code/nodeServer`
 
