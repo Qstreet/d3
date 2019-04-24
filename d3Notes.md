@@ -950,6 +950,10 @@ return svg.node();
 
 
 ### Data
+[StatFlux Instagram Analytics](http://statflux.com/)
+
+[GramPlaces Instagram Location Searches](http://gramplaces.com/)
+
 [Varieties of Democracy v9](https://www.v-dem.net/en/)
 
 [Berkeley Lib Datalab](http://www.lib.berkeley.edu/libraries/data-lab)
