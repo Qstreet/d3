@@ -1603,3 +1603,14 @@ for (i = 0; i < aa.length; i++) {
 };
 
 ```
+### Excel
+```
+Sub DeleteSpecifcColumn()
+    Set MR = Range("A1:BMK1")
+    For Each cell In MR
+        If cell.Value Like "*_codehigh" Then cell.EntireColumn.Delete
+    Next
+End Sub
+
+```
+
