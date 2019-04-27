@@ -1080,6 +1080,8 @@ return svg.node();
 > nice list of refs
 
 ### Good Old APIs
+[Last FM Music API](https://www.last.fm/api)
+
 [Programmable Web Monster API List and tutorials](https://www.programmableweb.com/category/all/apis)
 
 [Open Weather Map](https://openweathermap.org/)
