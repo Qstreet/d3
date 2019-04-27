@@ -29,7 +29,6 @@ d indicates “the current thing” in anonymous functions. When working with D3
 
 Data sets are called data or ds.
 
-
 ### Types of scaled data
 1. Categorical  male, female, African, Asian, S. American
 2. Ordinal (ranked)  s, m, l, xl, tall, med, short
@@ -60,6 +59,25 @@ Data sets are called data or ds.
 [Learn JS Data](https://observablehq.com/@dakoop/learn-js-data)
 
 ## SNIPPETS
+### Grid Horz and Vert
+```
+chart.append('g')
+    .attr('class', 'grid')
+    .attr('transform', `translate(0, ${height})`)
+    .call(d3.axisBottom()
+        .scale(xScale)
+        .tickSize(-height, 0, 0)
+        .tickFormat(''))
+```
+```
+chart.append('g')
+    .attr('class', 'grid')
+    .call(d3.axisLeft()
+        .scale(yScale)
+        .tickSize(-width, 0, 0)
+        .tickFormat(''))
+```
+
 ### Node Server
 `http-server ~/code/nodeServer`
 
