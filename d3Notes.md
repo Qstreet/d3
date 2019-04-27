@@ -27,9 +27,12 @@ d indicates “the current thing” in anonymous functions. When working with D3
 Data sets are called data or ds.
 
 
-### 3 types of data
-2. Categorical  male, female, African, Asian, S. American
-3. Ordinal (ranked)  s, m, l, xl, tall, med, short
+### Types of scaled data
+1. Categorical  male, female, African, Asian, S. American
+2. Ordinal (ranked)  s, m, l, xl, tall, med, short
+3. scaleQuantize: linear scale with discrete output range values. To sort data into “buckets"
+4. scaleQuantile like scaleQuantize but with discrete input domain values
+5. schemeCategory10, schemeCategory20. preset ordinal scales that output n categorical colors.
 
 ### 3 forms of DataVis
 1. exploring data - discover something new
