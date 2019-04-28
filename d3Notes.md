@@ -59,7 +59,7 @@ Data sets are called data or ds.
 [Learn JS Data](https://observablehq.com/@dakoop/learn-js-data)
 
 ## SNIPPETS
-### Grid Horz and Vert
+### Grid Lines Horiz and Vert
 ```
 chart.append('g')
     .attr('class', 'grid')
@@ -115,37 +115,37 @@ function parseData(data) {
  * @param {object} data Object containing historical data of BPI
  */
 function drawChart(data) {
-var svgWidth = 600, svgHeight = 400;
-var margin = { top: 20, right: 20, bottom: 30, left: 50 };
-var width = svgWidth - margin.left - margin.right;
-var height = svgHeight - margin.top - margin.bottom;
+  var svgWidth = 600, svgHeight = 400;
+  var margin = { top: 20, right: 20, bottom: 30, left: 50 };
+  var width = svgWidth - margin.left - margin.right;
+  var height = svgHeight - margin.top - margin.bottom;
 
-var svg = d3.select('svg')
+  var svg = d3.select('svg')
     .attr("width", svgWidth)
     .attr("height", svgHeight);
     
-var g = svg.append("g")
+  var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var x = d3.scaleTime()
+  var x = d3.scaleTime()
     .rangeRound([0, width]);
 
-var y = d3.scaleLinear()
+  var y = d3.scaleLinear()
     .rangeRound([height, 0]);
 
-var line = d3.line()
+  var line = d3.line()
     .x(function(d) { return x(d.date)})
     .y(function(d) { return y(d.value)})
     x.domain(d3.extent(data, function(d) { return d.date }));
     y.domain(d3.extent(data, function(d) { return d.value }));
 
-g.append("g")
+  g.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x))
     .select(".domain")
     .remove();
 
-g.append("g")
+  g.append("g")
     .call(d3.axisLeft(y))
     .append("text")
     .attr("fill", "#000")
@@ -155,7 +155,7 @@ g.append("g")
     .attr("text-anchor", "end")
     .text("Price ($)");
 
-g.append("path")
+  g.append("path")
     .datum(data)
     .attr("fill", "none")
     .attr("stroke", "steelblue")
@@ -1061,6 +1061,8 @@ return svg.node();
 
 
 ### Data
+[WHO World Heatlh Org](https://www.who.int/gho/en/)
+
 [StatFlux Instagram Analytics](http://statflux.com/)
 
 [GramPlaces Instagram Location Searches](http://gramplaces.com/)
