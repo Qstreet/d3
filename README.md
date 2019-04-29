@@ -1029,6 +1029,13 @@ return svg.node();
 
 [Lodash](https://unpkg.com/lodash@^4.17)
 
+### Forums
+[d3 Google Group](https://groups.google.com/forum/#!forum/d3-js)
+
+[Reddit]()
+
+[StackOverflow]()
+
 ### Social Media
 [Twitter API](https://developer.twitter.com/en/docs)
 
