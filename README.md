@@ -1,8 +1,8 @@
 # d3Projects
 # REMEMBER: d3 is a DOM manipulation library!
 
-[References](https://github.com/Qstreet/d3/blob/master/README.md#references)
-[Scales](https://github.com/Qstreet/d3/blob/master/README.md#scales)
+1. [References](https://github.com/Qstreet/d3/blob/master/README.md#references)
+2. [Scales](https://github.com/Qstreet/d3/blob/master/README.md#scales)
 
 ## Commandments
 I. the outer `<svg>` must have a H x W defined somewhere
