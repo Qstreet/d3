@@ -957,7 +957,10 @@ bigG.append('text')
 
 
 ## Javascript
+### Style Guides
+[Google](https://google.github.io/styleguide/jsguide.html)
 
+[AirBnB](https://github.com/airbnb/javascript)
 ### ObservableHQ
 #### DOM.svg
 alias for `document.createElementNS;`
