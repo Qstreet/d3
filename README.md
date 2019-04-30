@@ -1013,6 +1013,9 @@ return svg.node();
 ```
 
 ## References
+### Election Violence EV
+[Systemic Peace EV](http://www.systemicpeace.org/inscrdata.html)
+
 ### Storytelling
 [Story Telling Best Pracs](https://pudding.cool/process/responsive-scrollytelling/)
 
