@@ -1054,7 +1054,7 @@ return svg.node();
 [River DataWrapper](https://river.datawrapper.de/)
 
 ### d3
-
+#### v4
 [D# Tips and Tricks v4 Leanpub](https://leanpub.com/d3-t-and-t-v4/read)
 
 [Understanding the SVG Coord System](https://www.sarasoueidan.com/blog/svg-coordinate-systems/)
@@ -1065,20 +1065,22 @@ return svg.node();
 
 [Sydney Tutorials](http://www.sydneyurbanlab.com/D3Tutorials.html)
 
-[good v5 w exercises](https://github.com/sgratzl/d3tutorial#d3-data-join)
-    good v5 eUe code
-
 [d3.timeFormat api](https://github.com/d3/d3-time-format#locale_format)
 
 [js Code Readability](https://www.codereadability.com/)
 
 ### d3 examples
+#### v5 Demos
+[Updating Lines and Y axis](http://jonsadka.com/blog/how-to-create-live-updating-and-flexible-d3-line-charts-using-d3-js-v5-and-pseudo-data)
+
+[good v5 w exercises](https://github.com/sgratzl/d3tutorial#d3-data-join)
+    good v5 eUe code
+
 #### maps
 [d3 Examples](https://github.com/emeeks/d3-carto-map)
 
 #### Bubble Charts Force Layouts
 [Creating Bubble Charts w d3v4](https://vallandingham.me/bubble_charts_with_d3v4.html)
-
 
 ### Data
 [Health Resources and Services Administration](https://data.hrsa.gov/)
