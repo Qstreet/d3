@@ -1053,7 +1053,7 @@ return svg.node();
 
 [River DataWrapper](https://river.datawrapper.de/)
 
-### d3
+### D3
 #### v4
 [D# Tips and Tricks v4 Leanpub](https://leanpub.com/d3-t-and-t-v4/read)
 
@@ -1217,6 +1217,8 @@ return svg.node();
 [Learning d3](https://learningd3.com/blog/resources-to-improve-your-visualizations/)
 
 ### Tutorials & Classes
+[Learn JS Data d3 data](http://learnjsdata.com/read_data.html)
+
 [Udemy](https://www.udemy.com/masteringd3js/learn/lecture/8081896#content)
 
 [Curran Datavis 2018](https://curran.github.io/dataviz-course-2018/)
