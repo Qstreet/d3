@@ -1236,6 +1236,8 @@ return svg.node();
 > nice list of refs
 
 ### Good Old APIs
+[Top 10 Mapping API](https://www.programmableweb.com/news/10-most-popular-mapping-apis/brief/2019/05/03)
+
 [Last FM Music API](https://www.last.fm/api)
 
 [Programmable Web Monster API List and tutorials](https://www.programmableweb.com/category/all/apis)
