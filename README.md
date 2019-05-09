@@ -4,6 +4,7 @@
 1. [References](https://github.com/Qstreet/d3/blob/master/README.md#references)
 2. [JavaScript](https://github.com/Qstreet/d3/blob/master/README.md#javascript)
 3. [Scales](https://github.com/Qstreet/d3/blob/master/README.md#scales)
+4. [Date-Time](https://github.com/Qstreet/d3/blob/master/README.md#datetime)
 
 ## Commandments
 I. the outer `<svg>` must have a H x W defined somewhere
@@ -405,7 +406,7 @@ let dataBand = d3.scaleBand()
 [d3 API Time Format](https://github.com/d3/d3-time-format/blob/master/README.md#d3-time-format)
 
 ### Parse and Format Date/Time
-To convert a string from a csv or json create a parser
+To convert a date string from a csv or json into a javascript date obj, create a parser
 '''
 const parseTime =
       d3.timeParse("%m/%d/%Y %H:%M");
@@ -422,13 +423,6 @@ To convert the js date object a human-readable string:
 ```
 var formatTime = d3.timeFormat("%B %d, %Y");
 formatTime(new Date); // "June 30, 2015"
-```
-
-Likewise, to convert a string back to a date, create a parser:
-
-```
-var parseTime = d3.timeParse("%B %d, %Y");
-parseTime("June 30, 2015"); // Tue Jun 30 2015 00:00:00 GMT-0700 (PDT)
 ```
 
 ### Scale Date/Time
