@@ -1082,11 +1082,13 @@ return svg.node();
 [Creating Bubble Charts w d3v4](https://vallandingham.me/bubble_charts_with_d3v4.html)
 
 ### Data Sources
+[Integrated Crisis Early Warning System (ICEWS) Harver U ](https://dataverse.harvard.edu/dataverse/icews)
+
 [Sage Stats US domestic data](http://data.sagepub.com/sagestats/index.php)
 
 [Myanmar Open Data](https://opendevelopmentmyanmar.net/)
 
-(UN Sustainable Dev Goals Data)[http://uis.unesco.org/]
+[UN Sustainable Dev Goals Data](http://uis.unesco.org/)
 
 [AIDDATA William & Mary](http://geo.aiddata.org/query/#!/)
 
