@@ -1237,9 +1237,14 @@ return svg.node();
 [New Media @UCB](https://newmedia.report/classes/coding/2018/mapping-in-d3/)
 > nice list of refs
 
-### Good Old APIs
+### APIs
+#### Social Media APIs and Scripting
+[Twitter](https://developer.twitter.com/en/docs)
+
+#### Geo Mapping APIs
 [Top 10 Mapping API](https://www.programmableweb.com/news/10-most-popular-mapping-apis/brief/2019/05/03)
 
+#### General APIs
 [Last FM Music API](https://www.last.fm/api)
 
 [Programmable Web Monster API List and tutorials](https://www.programmableweb.com/category/all/apis)
