@@ -320,7 +320,7 @@ d3.csv(csvUrl, function(d) {
     y: +d.y
   };
 }).then(function(myData) {
-  console.log(data);
+  console.log(data)
 });
 ```
 
@@ -1012,6 +1012,11 @@ return svg.node();
 
 ### Storytelling
 [Story Telling Best Pracs](https://pudding.cool/process/responsive-scrollytelling/)
+
+### Data Journalism
+[DataJournalism](https://datajournalism.com/)
+
+[European Journalism Center](https://ejc.net/)
 
 ### javascript
 [Eloquent Javascript](http://eloquentjavascript.net/)
