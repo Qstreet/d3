@@ -1091,6 +1091,8 @@ return svg.node();
 
 ### Data Sources
 
+[Transparency Register (Europe)](http://ec.europa.eu/transparencyregister/public/homePage.do)
+
 [Famin Early Warning Systems Network](http://fews.net/)
 
 [Integrated Crisis Early Warning System (ICEWS) Harver U ](https://dataverse.harvard.edu/dataverse/icews)
