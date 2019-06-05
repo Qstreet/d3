@@ -26,9 +26,9 @@ IV. SVG is not HTML. SVG has no concept of reflow (i.e. changes in the position 
 ### Naming Conventions
 #### src: D3 for the impatient
 
-First-letter acronyms for individual objects: c for “circle”, p for point, and so on. Append an “s” for collections: cs will be an array of circles, ps an array of points.
+c for “circle”, p for point add an “s” for collections: cs will be an array of circles, ps an array of points.
 
-pixels are denoted with px, scale objects with sc. Generators and components are function objects that “make” something and thus are called mkr.
+pixels px, scale objects with sc. Generators and components are function objects that “make” something and thus are called mkr.
 
 d indicates “the current thing” in anonymous functions. When working with D3 selections, d is usually an individual data point bound to a DOM element; when working with arrays, d is an array element `ds.map( d => +d ))`.
 
