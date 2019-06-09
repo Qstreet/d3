@@ -1232,8 +1232,6 @@ return svg.node();
 
 [UN World Pop. 2017](https://population.un.org/wpp/)
 
-[Mr. Data Converter](https://shancarter.github.io/mr-data-converter/)
-
 [World Bank OpenData Catalog](https://datacatalog.worldbank.org/)
 
 [World Bank](https://data.worldbank.org/indicator/IT.NET.USER.ZS)
@@ -1322,6 +1320,8 @@ return svg.node();
 [USGS Earthquake Coding Challenge](https://www.youtube.com/watch?v=ZiYdOwOrGyc)
 
 ### Utilites and Helper Sites
+
+[Mr. Data Converter](https://shancarter.github.io/mr-data-converter/)
 
 [Geo Names geographical database](http://www.geonames.org/)
 
