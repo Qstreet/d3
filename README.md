@@ -1,5 +1,6 @@
 # d3Projects
-# REMEMBER: d3 is a DOM manipulation library!
+**REMEMBER: d3 is a DOM manipulation library!**
+
 1. [References](https://github.com/Qstreet/d3/blob/master/README.md#references)
 2. [JavaScript](https://github.com/Qstreet/d3/blob/master/README.md#javascript)
 3. [Scales](https://github.com/Qstreet/d3/blob/master/README.md#scales)
@@ -7,11 +8,8 @@
 
 ## Commandments
 I. the outer `<svg>` must have a H x W defined somewhere
-
 II. circles should always be scaled by area, not by radius value
-
 III. select an element in the DOM, then append an svg to it
-
 IV. SVG is not HTML. SVG has no concept of reflow (i.e. changes in the position of one element do not affect other elements apart from tspan and tref in text).
 
 ## Conventions
@@ -34,10 +32,10 @@ d indicates “the current thing” in anonymous functions. When working with D3
 
 Data sets are called data or ds.
 
-### Types of scaled data
+## Scaled data types
 1. Categorical  male, female, African, Asian, S. American
 2. Ordinal (ranked)  s, m, l, xl, tall, med, short
-3. scaleQuantize: linear scale with discrete output range values. To sort data into “buckets"
+3. scaleQuantize: linear scale with discrete output range values. To sort data into “buckets”
 4. scaleQuantile like scaleQuantize but with discrete input domain values
 5. schemeCategory10, schemeCategory20. preset ordinal scales that output n categorical colors.
 
@@ -59,9 +57,53 @@ Data sets are called data or ds.
 10. Add circles to show each datapoint
 11. Style the chart
 
-## Sort me!
 ### Combining Data
 [Learn JS Data](https://observablehq.com/@dakoop/learn-js-data)
+
+## Async JS fetch; promises; .then(); catch();
+Link to promise example at 
+[Good Read](https://javascript.info/promise-basics)
+```
+d3.json("https://example.com/path/data.json").then(function(data) {
+		// data is array of JSON objects (same for csv and tsv)
+		data.forEach(function(d){
+        d.NetValue = +d.NetValue;
+    })
+  .catch(function(error) {
+    console.log(error); // "oh, no!"
+});
+```
+
+### promise
+A _promise_ is a special JavaScript object that links the “producing code” and the “consuming code” together.
+
+The result of the call is a **promise** which can have a state of **pending**, **fulfilled** or **rejected**
+`d3.csv('data/ages.csv')`  
+
+??: the function passed to the promise is the **executor**. It contains the producing code, that should eventually produce a result.
+
+The resulting promise object has internal properties:
+* state— initially “pending”, then changes to either “fulfilled” or “rejected”,
+* result— an arbitrary value, initially undefined.
+
+Consuming functions can be registered (subscribed) using .then, .catch and .finally
+
+### then()
+The then method **RETURNS** a Promise which allows for method chaining.
+
+The first argument of .then is a function that:
+1. runs when the promise is resolved, and
+2. receives the result.
+
+The second argument of .then is a function that:
+1. runs when the promise is rejected, and
+2. receives the error.
+
+
+### CORS-header ‘Access-Control-Allow-Origin
+Cross-domain scripting with JSONP
+
+
 
 ## SNIPPETS
 ### Grid Lines Horiz and Vert
@@ -211,6 +253,10 @@ const urlJson = "file-topo.json";
 // lables
 // axes
 
+/****
+BEGIN PROMISE
+****/
+
 let promises = [
   d3.json("path/data.json", function(d) {    
     return {
@@ -347,7 +393,7 @@ d3.csv('fruit.csv').then(function(data){
 ```
 
 ## Scales
-> translate numbers from dataSpace to pixelSpace
+> translate numbers from dataSpace to pixelSpace  
 
 1. Quantitative: Continuous domain like dates, times, real numbers etc.
 2. Ordinal: Separate domains like categories, colors, names,
@@ -381,7 +427,7 @@ let nationToColor = d3.scaleOrdinal()
   .domain(["AF", "EAP", "SCA", "WHA", "EUR", "NEA" ])
   .range(["RED", "GREEN", "BLUE", "GOLD", "ORANGE", "PURPLE" ])
 ```  
-  // OR
+   OR
 ```
   .range(d3.schemeCategory10);
 ```
@@ -406,16 +452,16 @@ let dataBand = d3.scaleBand()
 
 ### Parse and Format Date/Time
 To convert a date string from a csv or json into a javascript date obj, create a parser
-'''
+‘’’
 const parseTime =
-      d3.timeParse("%m/%d/%Y %H:%M");
+      d3.timeParse(“%m_%d_%Y %H:%M”);
 
 d3.csv(urlCsv).then(function(dataCsv){
   dataCsv.forEach(function(d){
     d.DateTime = parseTime(d.DateTime);
   });
   
-'''
+‘’’
 
 To convert the js date object a human-readable string:
 
@@ -469,7 +515,7 @@ scaleSqrt is useful for sizing circles by area (rather than radius)
 cannot have a .domain with 0. range can have a 0.
 
 ## Axes
-d3 axes are functions whose parameters you define. Scales return values but don't append to the screen.
+d3 axes are functions whose parameters you define. Scales return values but don’t append to the screen.
 An axis function is called but doesn’t return a value like scales, but generates the visual elements of the axis, including lines, labels, and ticks.
 
 Axes are svg specific. They append an svg element to the DOM. Default placed at the svg canvas origin 0,0.
@@ -520,22 +566,22 @@ This code goes at the end of our script, so the axis is generated and rendered o
 ### d3.axisBottom
 ```
 let xAxisCall = d3.axisBottom(xScaleHere)
-  .tickSize(*defaults to 6*)
+  .tickSize(**defaults to 6**)
   
-bigG.append('g')
-  .attr('class','x-axis')
-  .attr('transform','translate(0,' + height +')')
+bigG.append(‘g’)
+  .attr(‘class’,’x-axis’)
+  .attr(‘transform’,’translate(0,’ + height +’)’)
   .call(xAxisCall)
 ```
 
 ```
 let yAxisCall = d3.axisLeft(yScaleHere)
-  .tickSizeInner(*VALUE*)
+  .tickSizeInner(**VALUE**)
   .tickSize(8.5);
     
-bigG.append('g')
-  .attr('class','y-axis')
-  // no transform needed as defaults to left side
+bigG.append(‘g’)
+  .attr(‘class’,’y-axis’)
+   no transform needed as defaults to left side
   .call(yAxisCall);
   
 ```
@@ -558,9 +604,9 @@ d3.axisBottom(xScaleName)
 ### min, max
 ```
 var data = [
-  {grade: "A", value: 4},
-  {grade: "B", value: 3},
-  {grade: "C", value: 2},
+  {grade: “A”, value: 4},
+  {grade: “B”, value: 3},
+  {grade: “C”, value: 2},
 ]
 ```
 
@@ -578,7 +624,7 @@ var min = d3.min(data, function(d){ return d.value; })
 let startHike= [96, 84, 92, 98, 94];
 let summit = [];
  
-for(let i=0;  i&lt;startHike.length; i++){
+for(let I=0;  I<startHike.length; I++){
   let hikerEenrgy=starthike[i];
  
   let halfEnergy= hikerEnergy/2
@@ -586,12 +632,12 @@ for(let i=0;  i&lt;startHike.length; i++){
   summit.push(halfEnergy);
 }
  
-// sumit => [48,42,46,49,47]
+ sumit => [48,42,46,49,47]
 ```
 
 ```
 let newArr = oldArr.map((val, index, arr) => {
-  // return element to new Array
+   return element to new Array
 });
 ```
 - newArr — the new array that is returned
@@ -616,7 +662,7 @@ let arr = [1,2,3,4];
 let newArr = arr.map((val, i, arr) => {
   return {
     value: val,
-    index: i
+    index: I
   };
 });
 
@@ -637,7 +683,7 @@ We want to double the even numbers and leave the odd numbers the same.
 let newArr = arr.map((v,i,a) => {
   return v % 2 === 0 ? v * 2 : v;
 });
-// newArr = [1,4,3,8];
+ newArr = [1,4,3,8];
 ```
 
 1. check if the value divided by two has a remainder of zero (odd v even)
@@ -646,7 +692,7 @@ let newArr = arr.map((v,i,a) => {
 
 // create domain of discrete elems for scaleBand() domain
 ```
-var grade_map = data.map(function(d){ return d.grade }) => ["A","B","C"]
+var grade_map = data.map(function(d){ return d.grade }) => [“A”,”B”,”C”]
 
 var x = d3.scaleBand().domain(data.map(function(d){ return d.grade; })
 	.range()
@@ -667,7 +713,7 @@ let summit = startHike.map(function(hikerEnergy){
   return waterLevel;
 });
  
-// summit => [86, 56, 42, 60, 36]
+ summit => [86, 56, 42, 60, 36]
 ```
 #### map snippets
 `let minIncome = d3.min(data, d => d3.min(d.countries.map(d => d.income))`
@@ -695,7 +741,7 @@ To keep only the even numbers, we return true if even, and false if odd
 let even = arr.filter(val => {
   return val % 2 === 0;
 });
-// even = [2,4,6]
+ even = [2,4,6]
 ```
 All you need do is define what you want to keep and then return true for those values.
 
@@ -729,7 +775,7 @@ return true if data.population is greater than 500,000,000.
 let cities = data.filter(val => {
   return val.population > 500000000;
 });
-// cities = [{country: "China", population: 1409517397},
+ cities = [{country: "China", population: 1409517397},
              {country: "India", population: 1339180127}]
 ```
 
@@ -746,7 +792,7 @@ let cities = data.filter(val => {
 reduce() method applies a function to each element in the array to reduce the array to a single value.
 ```
 let result = arr.reduce(callback);
-// Optionally, you can specify an initial value
+ Optionally, you can specify an initial value
 ```
 - let result = arr.reduce(callback, initValue);
 - result — the single value that is returned.
@@ -859,7 +905,7 @@ function getAges(data) {
   }
   return sum;
 }
-// getAges(data) = 84
+ getAges(data) = 84
 ```
 
 1. filter out the cats with filter(pet).  Returns true if type === dog
@@ -890,7 +936,7 @@ let ages = data
 }).reduce((sum, animal) => {
     return sum + animal.age;
 });
-// ages = 84
+ ages = 84
 ```
 Refactor w 3 functions
 
@@ -902,14 +948,12 @@ let isDog = (animal) => {
   return animal.type === 'dog';
 }
 ```
-
 function that multiplies the age of an element by seven and returns only the age in dog years:
 ```
 let dogYears = (animal) => {
   return animal.age * 7;
 }
 ```
-
 function that sums two numbers and returns the result:
 ```
 let sum = (sum, animal) => {
@@ -921,7 +965,7 @@ let ages = data
   .filter(isDog)
   .map(dogYears)
   .reduce(sum);
-// ages = 84
+ ages = 84
 ```
 
 ### Chart Labels or Titles
@@ -988,7 +1032,7 @@ return svg.node();
 ```
     <nav class="navbar navbar-default">
         <div class="container">
-            <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png"></a>      
+            <a class="navbar-brand" href=“[hashTagHere]”><img id="logo" src="img_logo.png"><_a>      
         </div>
     </nav>
 
@@ -1340,11 +1384,11 @@ var projection = d3.geoAlbersUsa()
     .translate([w/2, h/2])
     .scale([500]);
     
-// .translate to center of SVG image
+ .translate to center of SVG image
 
 var path = d3.geoPath().projection(projection);
 
-// also valid
+ also valid
 
 var path = d3.geoPath(projection);
 ```
@@ -1420,7 +1464,7 @@ d3.interval(function(){
 ### Tool Tip
 
 ```
-<link rel="stylesheet" href="//rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
+<link rel="stylesheet" href="rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
 <script src="https://unpkg.com/d3-tip@^0.9"></script>  
 ```
 
@@ -1539,7 +1583,7 @@ svg.selectAll("text")
 ### Event Listener
 ```
 d3.select("p")
-.on("click", function() { //Do something on click });
+.on("click", function() { Do something on click });
 ```
 
 This binds an event listener to the p paragraph element. on() takes two arguments: the event name, and the function to be executed when the event is triggered on the selected element.
@@ -1582,7 +1626,7 @@ Within anonymous functions, D3 automatically sets the context of this so it refe
 
 ### Centroids
 ```
-// Centroid Names
+ Centroid Names
  let centroidG = mainSvg.append('g');
   
   centroidG
@@ -1730,7 +1774,7 @@ If the function is called without the parameter, or the parameter set to undefin
 ## 'this' in javascript
 D3 implements a useful pattern where functions that operate on selections are given the selected DOM element via this. It allows us to use the selection’s bound data and the DOM element within the same context.
 ```
-selection.on('mouseenter', function(d) {
+selection.on(‘mouseenter’, function(d) {
   d3.select(this).text(d.name);
 });
 ```
@@ -1742,8 +1786,8 @@ From the release notes:
 So now we can use the group along with the provided index to access the current DOM element.
 
 ```
-selection.on('mouseenter', (d, i, nodes) => {
-  d3.select(nodes[i]).text(d.name);
+selection.on(‘mouseenter’, (d, I, nodes) => {
+  d3.select(nodes[I]).text(d.name);
 });
 ```
 Perhaps not quite as elegant, but it lets us keep the best of both worlds and avoid inconsistent function definition syntax. Note that this still points to the DOM element if we choose to use the “classic” function definition as before.
@@ -1770,48 +1814,53 @@ ITERATE through multi level array
 ```
 var aa = [[20, 37],[40, 61],[203, 77], [143, 107]];
 
-var svg = d3.select("svg");
+var svg = d3.select(“svg”);
 
 var breweryCircles = [];
-for (i = 0; i < aa.length; i++) {
-//use < here--^
-    breweryCircles.push(aa[i]);
+for (I = 0; I < aa.length; I++) {
+use < here—^
+    breweryCircles.push(aa[I]);
 
-    svg.selectAll("circle")
+    svg.selectAll(“circle”)
         .data(breweryCircles)
         .enter()
-        .append('circle')
-        .attr("cx", function(d) {
+        .append(‘circle’)
+        .attr(“cx”, function(d) {
             return d[0];
         })
-        .attr("cy", function(d) {
+        .attr(“cy”, function(d) {
             return d[1];
         })
-        .attr("r", 5)
-        .attr("fill", "red")
+        .attr(“r”, 5)
+        .attr(“fill”, “red”)
 };
 
 ```
 ### Excel
 ```
 Sub DeleteSpecifcColumn()
-    Set MR = Range("A1:BMK1")
+    Set MR = Range(“A1:BMK1”)
     For Each cell In MR
-        If cell.Value Like "*_codehigh" Then cell.EntireColumn.Delete
+        If cell.Value Like “*_codehigh” Then cell.EntireColumn.Delete
     Next
 End Sub
 
 ```
 ```
 Sub DeleteRows()
-    'get last row in column A
-    Last = Cells(Rows.Count, "D").End(xlUp).Row
-    For i = Last To 1 Step -1
-        'if cell value is less than 100
-        If (Cells(i, "D").Value) < 1968 Then
-            'delete entire row
-            Cells(i, "D").EntireRow.Delete
+    ‘get last row in column A
+    Last = Cells(Rows.Count, “D”).End(xlUp).Row
+    For I = Last To 1 Step -1
+        ‘if cell value is less than 100
+        If (Cells(I, “D”).Value) < 1968 Then
+            ‘delete entire row
+            Cells(I, “D”).EntireRow.Delete
         End If
-    Next i
+    Next I
 End Sub
 ```
+
+
+
+#dataViz/d3
+#github
