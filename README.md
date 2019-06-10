@@ -449,6 +449,7 @@ let dataBand = d3.scaleBand()
 
 ### Parse and Format Date/Time
 To convert a date string from a csv or json into a javascript date obj, create a parser
+
 ‘’’
 const parseTime =
       d3.timeParse(“%m_%d_%Y %H:%M”);
