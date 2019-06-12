@@ -1133,6 +1133,8 @@ return svg.node();
 
 ### Data Sources
 
+[Tax Introduction Database (TID)](http://tid.seelkopf.eu/)
+
 [Transparency Register (Europe)](http://ec.europa.eu/transparencyregister/public/homePage.do)
 
 [Famin Early Warning Systems Network](http://fews.net/)
