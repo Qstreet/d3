@@ -116,7 +116,19 @@ The second argument of .then is a function that:
 Cross-domain scripting with JSONP
 
 ## SNIPPETS
-### Random Boolean T/F
+
+// Check if odd/even
+```
+function isEven(n) {
+  return n == parseFloat(n) ? !(n % 2) : void 0;
+}
+```
+// Take a number and return same or flipped
+```
+function randomOddEven(n) {
+  return (Math.random() >= 0.5 ? n : -n );
+}
+```
 ```
 // Double negation
 !!Math.floor(Math.random() * 2);
