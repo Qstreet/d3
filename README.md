@@ -23,6 +23,7 @@ copied from BEAR 2019-06-09
 2. When most d3 functions are called with arguments these functions act as setters (setting the corresponding property to the supplied value)
 3. when called without arguments, getters (returning the current value of the property).
 4. To entirely remove a property, call the appropriate setter with `null` as argument.
+5. class for groups, style for exceptions
 
 ### Style Conventions (use svg NOT css. fill, not color)
 [MDN SVG Attr Ref](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute)
