@@ -16,8 +16,8 @@ copied from BEAR 2019-06-09
 5. Push the bar to bottom margin: Chart height minus data value (d) returns 'y' coord `return chartHeight - d`; `return d` sets the height of the bar with the base flat on the bottom
 6. To transition anything, it must have had a previous state from which to transition.
 7. You cannot add html to an svg canvas. Text must be an svg text object. `svg.selectAll('text').data(data).enter().append('text).text(d => d).attr('x',Xcoord).attr('y',Ycoord)`
-8. *Parse* converts a string to a JS time obj `parseTime = d3.timeParse("%m/%d/%y")`
-9. *Format* converts a JS time obj to a string for display `formatTime = d3.timeFormat("%b %e")`
+8. *Parse* converts a string to a JS date obj `parseTime = d3.timeParse("%m/%d/%y")`
+9. *Format* converts a JS date obj back to a string for display `formatTime = d3.timeFormat("%b %e")`
 
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
