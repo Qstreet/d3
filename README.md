@@ -24,7 +24,7 @@ copied from BEAR 2019-06-09
     	.attr("class", "axis")
     	.attr("transform", "translate(0," + (h - 10) + ")")
     	.call(xAxis);
-
+12. An event listener is an anonymous function that listens for a specific event on a specific element or elements.
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
 2. When most d3 functions are called with arguments these functions act as setters (setting the corresponding property to the supplied value)
