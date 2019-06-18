@@ -27,6 +27,7 @@ copied from BEAR 2019-06-09
     	.call(xAxis);
 12. An event listener is an anonymous function that listens for a specific event on a specific element or elements.
 13. selectAll().data().enter().append()
+14. Selections are immutable. All selection methods that affect which elements are selected (or their order) return a new selection rather than modifying the current selection.
 
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
