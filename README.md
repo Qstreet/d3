@@ -1401,6 +1401,10 @@ return svg.node();
 
 ## Shapfiles and GeoJson
 
+[MapShapper](https://mapshaper.org/)
+
+[Statsilk](https://www.statsilk.com/maps/download-free-shapefile-maps)
+
 [CGIAR CSI Constorium fore Spatial Info](https://cgiarcsi.community/)
 
 [Europa Maps](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/countries)
