@@ -1171,6 +1171,13 @@ return svg.node();
 [Creating Bubble Charts w d3v4](https://vallandingham.me/bubble_charts_with_d3v4.html)
 
 ### Data Sources
+#### Currency Rates
+[Open Exchange Rates](https://openexchangerates.org/)
+
+[Exchange Rate InforEuro](https://ec.europa.eu/budget/graphs/inforeuro.html)
+
+[Eur Cent Bank](http://sdw.ecb.europa.eu/browse.do?node=9691296)
+
 #### Economic Data
 [OEC (World Trade)](https://atlas.media.mit.edu/en/resources/data/)
 
