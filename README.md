@@ -1175,8 +1175,7 @@ return svg.node();
 [Open Exchange Rates](https://openexchangerates.org/)
 
 [Exchange Rate InforEuro](https://ec.europa.eu/budget/graphs/inforeuro.html)
-;one
-:two
+:good list of nations and currencies
 
 [Eur Cent Bank](http://sdw.ecb.europa.eu/browse.do?node=9691296)
 
