@@ -1172,6 +1172,8 @@ return svg.node();
 
 ### Data Sources
 #### Currency Rates
+[Intl Curr Ex (State)](http://ice.cgfs.state.sbu/)
+
 [Open Exchange Rates](https://openexchangerates.org/)
 
 [Exchange Rate InforEuro](https://ec.europa.eu/budget/graphs/inforeuro.html)
