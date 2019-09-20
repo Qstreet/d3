@@ -20,7 +20,8 @@ copied from BEAR 2019-06-09
 * You cannot add html to an svg canvas. Text must be an svg text object. `svg.selectAll('text').data(data).enter().append('text).text(d => d).attr('x',Xcoord).attr('y',Ycoord)`
 * *Parse* converts a string to a JS date obj `parseTime = d3.timeParse("%m/%d/%y")`
 * *Format* converts a JS date obj back to a string for display `formatTime = d3.timeFormat("%b %e")`
-* Scales return values; Axes are functions into which scales are passed and return svg shapes to be placed on the screen
+* A scale is a function which return values between two domains
+* Axes are functions into which scales are passed and return svg shapes to be placed on the screen
 `xAxis = d3.axisBottom(xScale).ticks(5);` `mainSvg.append('g').call(xAxis)`
 * g 
 ```
