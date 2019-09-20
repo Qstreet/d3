@@ -33,7 +33,7 @@ svg.append("g")
 * `selectAll().data().enter().append()`
 * Selections are immutable. All selection methods that affect which elements are selected (or their order) return a new selection rather than modifying the current selection.
 * const arrowFn = d => d.temp  return is included. must include RETURN with non-arrow functions
-* d3.selection() returns selection objects which are a subclass of Array
+* d3.selection() methods return a selection object which are a subclass of Array
 
 Excerpt From: Nate Murray. “Fullstack Data Visualization with D3.” Apple Books. 
 
