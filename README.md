@@ -11,6 +11,7 @@ copied from BEAR 2019-06-09
 
 ## Cardinal Rules
 * The outer `<svg>` must have H x W defined somewhere
+* domain: min/max input, range: min/max output
 * Create accessor function to convert a data point into a value
 * REMEMBER: accessor functions return an unscaled value 
 * Select an element in the DOM, then append an svg to it
