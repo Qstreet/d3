@@ -32,6 +32,7 @@ svg.append("g")
 * An event listener is an anonymous function that listens for a specific event on a specific element or elements.
 * `selectAll().data().enter().append()`
 * Selections are immutable. All selection methods that affect which elements are selected (or their order) return a new selection rather than modifying the current selection.
+* const arrowFn = d => d.temp  return is included. must include RETURN with non-arrow functions
 
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
