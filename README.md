@@ -40,6 +40,27 @@ svg.append("g")
 * d3 selections have a .call() method that executes the provided function with the selection as the first parameter.
 We can use .call() to: prevent saving our selection as a variable, and preserve the selection for additional chaining.
 
+## Steps
+* Access data
+
+Look at the data structure and declare how to access the values we’ll need
+* Create chart dimensions
+
+Declare the physical (i.e. pixels) chart parameters
+* Draw canvas
+
+Render the chart area and bounds element
+* Create scales
+
+Create scales for every data-to-physical attribute in our chart
+* Draw data
+
+Render your data elements
+* Draw peripherals
+
+Render your axes, labels, and legends
+* Set up interactions
+
 
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
