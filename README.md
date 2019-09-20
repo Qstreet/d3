@@ -36,6 +36,9 @@ svg.append("g")
 * Selections are immutable. All selection methods that affect which elements are selected (or their order) return a new selection rather than modifying the current selection.
 * const arrowFn = d => d.temp  return is included. must include RETURN with non-arrow functions
 * d3.selection() methods return a selection object which are a subclass of Array
+* .attr() to set fill as an attribute for example, has a lower CSS precedence than linked stylesheets, which will let us overwrite the value. Setting .style() on the otherhand sets an inline style which would require an !important CSS declaration to override.
+
+Excerpt From: Nate Murray. “Fullstack Data Visualization with D3.” Apple Books. 
 
 Excerpt From: Nate Murray. “Fullstack Data Visualization with D3.” Apple Books. 
 
