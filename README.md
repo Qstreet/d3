@@ -9,24 +9,27 @@ copied from BEAR 2019-06-09
 4. [Date-Time](https://github.com/Qstreet/d3/blob/master/README.md#datetime)
 5. [Snippets](https://github.com/Qstreet/d3/blob/master/README.md#snippets)
 
-## Eureka
-1. The outer `<svg>` must have a H x W defined somewhere
-3. Select an element in the DOM, then append an svg to it
-4. SVG is not HTML. SVG has no concept of reflow (i.e. changes in the position of one element do not affect other elements apart from tspan and tref in text).
-5. Push the bar to bottom margin: Chart height minus data value (d) returns 'y' coord `return chartHeight - d`; `return d` sets the height of the bar with the base flat on the bottom
-6. To transition anything, it must have had a previous state from which to transition.
-7. You cannot add html to an svg canvas. Text must be an svg text object. `svg.selectAll('text').data(data).enter().append('text).text(d => d).attr('x',Xcoord).attr('y',Ycoord)`
-8. *Parse* converts a string to a JS date obj `parseTime = d3.timeParse("%m/%d/%y")`
-9. *Format* converts a JS date obj back to a string for display `formatTime = d3.timeFormat("%b %e")`
-10. Scales return values; Axes are functions into which scales are passed and return svg shapes to be placed on the screen
+## Cardinal Rules
+* The outer `<svg>` must have H x W defined somewhere
+* Select an element in the DOM, then append an svg to it
+* SVG is not HTML. SVG has no concept of reflow (i.e. changes in the position of one element do not affect other elements apart from tspan and tref in text).
+* Push the bar to bottom margin: Chart height minus data value (d) returns 'y' coord `return chartHeight - d`; `return d` sets the height of the bar with the base flat on the bottom
+* To transition anything, it must have had a previous state from which to transition.
+* You cannot add html to an svg canvas. Text must be an svg text object. `svg.selectAll('text').data(data).enter().append('text).text(d => d).attr('x',Xcoord).attr('y',Ycoord)`
+* *Parse* converts a string to a JS date obj `parseTime = d3.timeParse("%m/%d/%y")`
+* *Format* converts a JS date obj back to a string for display `formatTime = d3.timeFormat("%b %e")`
+* Scales return values; Axes are functions into which scales are passed and return svg shapes to be placed on the screen
 `xAxis = d3.axisBottom(xScale).ticks(5);` `mainSvg.append('g').call(xAxis)`
-11. svg.append("g")
+* g 
+```
+svg.append("g")
     	.attr("class", "axis")
     	.attr("transform", "translate(0," + (h - 10) + ")")
     	.call(xAxis);
-12. An event listener is an anonymous function that listens for a specific event on a specific element or elements.
-13. selectAll().data().enter().append()
-14. Selections are immutable. All selection methods that affect which elements are selected (or their order) return a new selection rather than modifying the current selection.
+```
+* An event listener is an anonymous function that listens for a specific event on a specific element or elements.
+* `selectAll().data().enter().append()`
+* Selections are immutable. All selection methods that affect which elements are selected (or their order) return a new selection rather than modifying the current selection.
 
 ## Conventions
 1. When called as setters, functions typically return a reference to the current object, thus enabling method chaining.
